@@ -1,0 +1,54 @@
+* {
+	font-family: "Jura", sans-serif;
+}
+
+body {
+background: #1f1c18;
+background: -webkit-linear-gradient(to right,#8e0e00, #1f1c18);
+background: linear-gradient(to right, #8e0e00, #1f1c18);
+
+color: white;
+padding: 60px;
+    
+
+}
+
+#location {
+	display: block;
+	border: none;
+	background: rgba(255,255,255, .5);
+	border-radius: 10px;
+	padding: 20px;
+	color: white;
+	outline: none;
+	width: 100%;
+	font-size: 30px;
+	font-weight: 300;
+}
+
+#location::placeholder {
+	color: rgba(255,255,255, .5);
+
+}
+
+#show {
+	display: block;
+	border: none;
+	margin-top: 15px;
+    background: #8e0e00;
+    background: -webkit-linear-gradient(to right, #1f1c18, #8e0e00);
+    background: linear-gradient(to right, #1f1c18, #8e0e00);
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    outline: none;
+    width: 100%;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-size: bold;
+    cursor: pointer;
+}
+
+#show:hover {
+	opacity: .9;
+}

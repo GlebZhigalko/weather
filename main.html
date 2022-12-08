@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <title>Погода</title>
+       <script src="eel.js"></script>
+     <link rel="icon" type="image/png" href="/favicon.png">
+     <link rel="stylesheet" type="text/css" href="main.css">
+     <link href="https://fonts.googleapis.com/css?family=Jura:wght@200;200;400&display=swap" 
+     rel="stylesheet">
+</head>
+<body>
+<input id="location" type="text" placeholder="Введите название страны и города :)" required="" value="Белград, Сербия">
+
+<button id="show">Узнать погоду моментально!</button>
+
+<hr>
+
+<div id="info"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script type="text/javascript">
+//функция, которая отвечает за питон код 
+async function display_weather() {
+     let place = document.getElementById('location').value;
+//функция для погоды и возвращение полученный информации из кода 
+     let res = await eel.get_weather(place)();
+     document.getElementById('info').innerHTML = res;
+}
+//обработка запроса на получение информации о погоде через клик по кнопке
+jQuery(show).on('click', function() {
+     display_weather();
+});
+</script>
+</body>
+</html>
